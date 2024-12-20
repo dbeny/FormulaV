@@ -1,0 +1,22 @@
+{
+	"name": "fv",
+	"version": "1.0.0",
+	"scripts": {
+		"build": "webpack --mode=production",
+		"watch": "webpack watch --mode=development",
+		"start": "tsx src/server/index.ts"
+	},
+	"workspaces": [
+		"src/client",
+		"src/server",
+		"src/shared"
+	],
+	"author": "dbeny",
+	"devDependencies": {
+		"ts-loader": "^9.5.1",
+		"tsx": "^4.19.2",
+		"typescript": "^5.7.2",
+		"webpack": "^5.96.1",
+		"webpack-cli": "^5.1.4"
+	}
+}
