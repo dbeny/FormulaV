@@ -2,7 +2,7 @@ import express, {Request, Response, Router} from "express";
 import Mongobase from "../mongo/Mongobase";
 import path from "path";
 
-export const authRouter: Router = express.Router(/*{mergeParams: true}*/);
+export const apiRouter: Router = express.Router(/*{mergeParams: true}*/);
 
 function ifAuthenticated(req: Request, res: Response, next: any) {
 	if (req.isAuthenticated()) return next();
@@ -14,14 +14,14 @@ function ifNotAuthenticated(req: Request, res: Response, next: any) {
 	else next();
 }
 
-authRouter.get("/", ifNotAuthenticated, (_req: Request, res: Response) => {
+apiRouter.get("/", ifNotAuthenticated, (_req: Request, res: Response) => {
 	res.sendFile(path.resolve("./client/index.html"));
 });
 
-authRouter.post("/login", ifNotAuthenticated, (_res: Request, res: Response) => {
+apiRouter.post("/login", ifNotAuthenticated, (_res: Request, res: Response) => {
 	res.status(403).send("Not yet");
 });
 
-authRouter.post("/register", ifNotAuthenticated, (_res: Request, res: Response) => {
+apiRouter.post("/register", ifNotAuthenticated, (_res: Request, res: Response) => {
 	res.status(403).send("Not yet");
 });

@@ -5,7 +5,7 @@ import fs from "fs";
 import Mongobase from "./mongo/Mongobase";
 import passport from "passport";
 import session from "express-session";
-import {authRouter} from "./routers/AuthRouter";
+import {apiRouter} from "./routers/ApiRouter";
 import Utils from "fv-shared/Utils";
 import initializePassport from "./PassportConfig";
 
@@ -38,10 +38,9 @@ app.use(passport.session());
 app.use(passport.authenticate("session"));
 
 initializePassport();
-app.use("/auth", authRouter);
 
+app.use("/api", apiRouter);
 app.get("/*", (_req: Request, res: Response) => res.sendFile(path.resolve("./client/index.html")));
-
 
 const port = parseInt(process.env.EXPRESS_SERVER_PORT as string, 10) || 443;
 https.createServer(options, app).listen(port, () => console.log(`Listening on port ${port}`));

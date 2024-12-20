@@ -13,7 +13,6 @@ export default class App extends React.Component<AppProps, AppState> {
 	
 	render() {
 		let props: PageProps = { app: this };
-		console.log("path: " + this.state.page);
 		return parsePath(this.state.page, props);
 	}
 	
@@ -23,8 +22,7 @@ export default class App extends React.Component<AppProps, AppState> {
 		this.setState({...this.state, page: path, pageData: data});
 	}
 	
-	componentDidMount() {
-	}
+	componentDidMount() {}
 }
 
 interface AppProps {
