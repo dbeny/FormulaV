@@ -9,11 +9,11 @@ export default class TextButton extends React.Component<TextButtonProps> {
 	}
 	
 	render() {
-		return <a onClick={this.props.clicked()}>{this.props.text}</a>;
+		return <a className={"textButton"} onClick={this.props.onClick}>{this.props.text}</a>;
 	}
 }
 
 interface TextButtonProps {
 	text: string,
-	clicked: any
+	onClick: () => void
 }

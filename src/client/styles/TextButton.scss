@@ -5,7 +5,9 @@
 	cursor: pointer;
 	font-weight: bold;
 	user-select: none;
+	font-size: 150%;
 }
 .textButton:hover {
-	color: var(--red)
+	text-decoration: underline;
+	text-decoration-thickness: 2px;
 }

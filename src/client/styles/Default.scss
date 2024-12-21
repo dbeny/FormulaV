@@ -10,9 +10,12 @@ html, body {
 
 :root {
 	--red: rgb(201, 22, 22);
-	--text: rgba(239, 235, 235, 0.9);
+	--text: rgb(246, 246, 246);
+	--text-hover: rgba(150, 145, 145, 1);
 	--fv: rgb(239 181 101);
 	--blue: rgb(50, 50, 90);
+
+	--header-margin-percent: 15%;
 }
 
 body {

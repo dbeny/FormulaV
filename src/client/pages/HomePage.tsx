@@ -15,7 +15,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
 	
 	render() {
 		return <>
-			<DefaultHeader/>
+			<DefaultHeader app={this.props.app}/>
 			<div className={"homePageContainer"}>
 				<img src={defaultLogo} alt={""}/>
 				Work in progress...
