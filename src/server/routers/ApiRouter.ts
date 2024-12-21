@@ -18,7 +18,7 @@ apiRouter.get("/", ifNotAuthenticated, (_req: Request, res: Response) => {
 	res.sendFile(path.resolve("./client/index.html"));
 });
 
-apiRouter.post("/login", ifNotAuthenticated, (_res: Request, res: Response) => {
+apiRouter.get("/login", ifNotAuthenticated, (_res: Request, res: Response) => {
 	res.status(403).send("Not yet");
 });
 

@@ -24,8 +24,13 @@ export default class AdminPage extends React.Component<AdminPageProps, AdminPage
 						<input type={"text"} placeholder={"Username"}/>
 						<input type={"password"} placeholder={"Password"}/>
 					</div>
-					<NeonButton text={"Login"} color={"White"} onClick={() => {
-					
+					<NeonButton text={"Login"} color={"White"} onClick={async () => {
+						try {
+							let res = await fetch("/api/login");
+							console.log(res);
+						} catch (error) {
+							console.error(error);
+						}
 					}} app={this.props.app}/>
 				</div>
 			</div>

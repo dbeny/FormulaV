@@ -2,7 +2,6 @@
 
 :root {
 	--page-padding: 1vw;
-	//--page-width: calc(100% - var(--header-margin-percent)*2 - var(--page-padding)*2);
 	--page-width: calc(100% - var(--header-margin-percent)*2);
 }
 
@@ -14,6 +13,7 @@
 	top: 0;
 	left: var(--header-margin-percent);
 	width: var(--page-width);
+	min-height: calc(100% - var(--default-header-height) - var(--page-padding) / 2);
 	height: auto;
 	padding: var(--page-padding);
 
