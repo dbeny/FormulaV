@@ -16,7 +16,7 @@ export default class NewsPage extends React.Component<NewsPageProps, NewsPageSta
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"newsPageContainer"}>
+			<div className={"page newsPageContainer"}>
 				News
 			</div>
 		</>;

@@ -16,7 +16,7 @@ export default class AcademiesPage extends React.Component<AcademiesPageProps, A
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"academiesContainer"}>
+			<div className={"page academiesContainer"}>
 				Academies
 			</div>
 		</>;

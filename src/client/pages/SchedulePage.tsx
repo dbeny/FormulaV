@@ -16,7 +16,7 @@ export default class SchedulePage extends React.Component<SchedulePageProps, Sch
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"schedulePageContainer"}>
+			<div className={"page schedulePageContainer"}>
 				Schedule
 			</div>
 		</>;

@@ -16,7 +16,7 @@ export default class HistoryPage extends React.Component<HistoryPageProps, Histo
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"historyPageContainer"}>
+			<div className={"page historyPageContainer"}>
 				History
 			</div>
 		</>;

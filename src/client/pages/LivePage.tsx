@@ -16,7 +16,7 @@ export default class LivePage extends React.Component<LivePageProps, LivePageSta
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"livePageContainer"}>
+			<div className={"page livePageContainer"}>
 				Live
 			</div>
 		</>;
