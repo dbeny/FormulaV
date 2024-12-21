@@ -13,7 +13,9 @@ export default class DefaultHeader extends React.Component<PageProps, any> {
 	
 	render() {
 		return <div className={"defaultHeaderContainer"}>
-			<img src={whiteLogo} alt={""}/>
+			<img onClick={() => {
+				this.props.app.setPage("/", true, null)
+			}} src={whiteLogo} alt={""}/>
 			<div className={"defaultHeaderButtons"}>
 				<TextButton text={"News"} onClick={() => {
 					this.props.app.setPage("/news", true, null);
@@ -21,8 +23,8 @@ export default class DefaultHeader extends React.Component<PageProps, any> {
 				<TextButton text={"Schedule"} onClick={() => {
 					this.props.app.setPage("/schedule", true, null);
 				}}/>
-				<TextButton text={"Results"} onClick={() => {
-					this.props.app.setPage("/results", true, null);
+				<TextButton text={"History"} onClick={() => {
+					this.props.app.setPage("/history", true, null);
 				}}/>
 				<TextButton text={"Drivers"} onClick={() => {
 					this.props.app.setPage("/drivers", true, null);

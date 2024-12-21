@@ -4,10 +4,9 @@ import "../styles/PageContainers.scss";
 import DefaultHeader from "../components/DefaultHeader";
 
 import defaultLogo from "../static/assets/logo/fv_default.png";
-import animatedLogo from "../static/assets/logo/fv_animated.gif";
 
-export default class HomePage extends React.Component<HomePageProps, HomePageState> {
-	static id = "HomePage";
+export default class HistoryPage extends React.Component<HistoryPageProps, HistoryPageState> {
+	static id = "HistoryPage";
 	
 	constructor(props: any) {
 		super(props);
@@ -17,9 +16,8 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app}/>
-			<div className={"homePageContainer"}>
-				<img src={animatedLogo} alt={""}/>
-				Work in progress...
+			<div className={"historyPageContainer"}>
+				History
 			</div>
 		</>;
 	}
@@ -27,6 +25,6 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
 	componentDidMount() {}
 }
 
-interface HomePageProps extends PageProps {}
+interface HistoryPageProps extends PageProps {}
 
-interface HomePageState {}
+interface HistoryPageState {}

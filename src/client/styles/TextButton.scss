@@ -3,9 +3,9 @@
 .textButton {
 	color: var(--text);
 	cursor: pointer;
-	font-weight: bold;
 	user-select: none;
-	font-size: 150%;
+	font-size: 125%;
+	height: 100%;
 }
 .textButton:hover {
 	text-decoration: underline;
