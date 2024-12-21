@@ -1,0 +1,32 @@
+@use "Default";
+
+.defaultHeaderContainer {
+	display: flex;
+	flex-direction: row;
+
+	align-items: center;
+	align-content: stretch;
+	justify-content: center;
+	text-align: center;
+
+	padding: 5px;
+
+	background-color: var(--fv);
+
+	width: 100%;
+	height: 7%;
+
+	.flex-1 {
+		flex-grow: 1;
+	}
+
+	img {
+		margin-left: 10%;
+		height: 5vh;
+		width: max-content;
+	}
+
+	.defaultHeaderButtons {
+		margin-right: 10%;
+	}
+}

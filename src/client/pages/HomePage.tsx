@@ -1,5 +1,9 @@
 import React from "react";
 import {PageProps} from "../App";
+import "../styles/HomePage.scss";
+import DefaultHeader from "../components/DefaultHeader";
+
+import defaultLogo from "../static/assets/logo/fv_default.png";
 
 export default class HomePage extends React.Component<HomePageProps, HomePageState> {
 	static id = "HomePage";
@@ -11,7 +15,11 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
 	
 	render() {
 		return <>
-		
+			<DefaultHeader/>
+			<div className={"homePageContainer"}>
+				<img src={defaultLogo} alt={""}/>
+				Work in progress...
+			</div>
 		</>;
 	}
 	

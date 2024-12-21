@@ -36,7 +36,7 @@ export default {
 				],
 			},
 			{
-				test: /\.(png)$/,
+				test: /\.(png|gif)$/,
 				type: "asset/resource"
 			}
 		]

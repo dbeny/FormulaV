@@ -1,0 +1,11 @@
+@use "Default";
+
+.textButton {
+	color: var(--text);
+	cursor: pointer;
+	font-weight: bold;
+	user-select: none;
+}
+.textButton:hover {
+	color: var(--red)
+}

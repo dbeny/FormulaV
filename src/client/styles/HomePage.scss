@@ -1,0 +1,25 @@
+@use "Default";
+
+.homePageContainer {
+	display: flex;
+	flex-direction: column;
+
+	border-radius: 8px;
+
+	align-items: center;
+	align-content: center;
+	text-align: center;
+	justify-content: center;
+
+	position: absolute;
+	top: calc(50% - 15vh / 2);
+	left: calc(50% - 20vw / 2);
+
+	width: 20vw;
+	height: 15vh;
+
+	img {
+		width: 100%;
+		height: 50%;
+	}
+}

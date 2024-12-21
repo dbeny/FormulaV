@@ -1,5 +1,5 @@
 import React from "react";
-import "./styles/default.scss";
+import "./styles/Default.scss";
 import {parsePath} from "./PageProvider";
 
 export default class App extends React.Component<AppProps, AppState> {
