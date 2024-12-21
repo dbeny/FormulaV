@@ -5,7 +5,7 @@ html, body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	font-family: sans-serif;
+	font-family: F1Regular, sans-serif;
 }
 
 :root {
@@ -18,6 +18,16 @@ html, body {
 	--background-gray: rgb(37, 36, 36);
 
 	--header-margin-percent: 15%;
+}
+
+@font-face {
+	font-family: F1Regular;
+	src: url("../static/assets/font/Formula1-Regular.otf") format("opentype");
+}
+
+@font-face {
+	font-family: F1Bold;
+	src: url("../static/assets/font/Formula1-Bold.otf") format("opentype");
 }
 
 body {

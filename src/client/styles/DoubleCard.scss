@@ -1,0 +1,47 @@
+@use "Default";
+
+.doubleCard {
+	display: flex;
+	flex-direction: row;
+
+	//border: 3px solid white;
+
+	width: 90%;
+	height: 40vh;
+	padding: 0.5vw;
+
+	.doubleCardImage {
+		display: flex;
+
+		width: 50%;
+		height: 100%;
+
+		img {
+			width: 100%;
+		}
+	}
+
+	.doubleCardText {
+		display: flex;
+		flex-direction: column;
+
+		width: 50%;
+		height: 100%;
+
+		align-items: center;
+		align-content: center;
+		justify-content: center;
+
+		div {
+			padding: 2vw;
+			h1 {
+				font-family: F1Bold, sans-serif;
+				margin-bottom: 0;
+				font-size: 250%;
+			}
+			p {
+				font-family: sans-serif
+			}
+		}
+	}
+}

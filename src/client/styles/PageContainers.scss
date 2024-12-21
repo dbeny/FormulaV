@@ -6,42 +6,35 @@
 }
 
 .page {
-	position: relative;
-	top: 0;
-	left: var(--header-margin-percent);
-	align-self: center;
-
 	display: flex;
 	flex-direction: column;
 
+	position: relative;
+	top: 0;
+	left: var(--header-margin-percent);
 	width: var(--page-width);
-	height: 100%;
+	height: max-content;
+	padding: var(--page-padding);
 
 	background-color: var(--background-darker-gray);
+	-webkit-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.75);
+	box-shadow: inset 0 0 10px 0 rgba(0, 0, 0, 0.75);
 
-	-webkit-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
-	-moz-box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
-	box-shadow: inset 0 0 10px 0 rgba(0,0,0,0.75);
-
-	overflow: hidden;
 	overflow-y: auto;
-
-	padding: var(--page-padding);
 }
 
 .homePageContainer {
+	font-family: F1Regular, serif;
+
 	align-items: center;
 	align-content: center;
-	text-align: center;
-	justify-content: center;
-
-	img {
-		position: absolute;
-		top: calc(50% - var(--page-width) / 2);
-		left: calc(50% - var(--page-width) / 2);
-
-		width: 50%;
+	.homePageLogo {
+		top: 0;
+		width: 20%;
 	}
+	.doubleCard {margin-bottom: .1vh;}
+	h1 {margin-bottom: 5vh}
 }
 
 .newsPageContainer {}
