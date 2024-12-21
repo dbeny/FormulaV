@@ -1,4 +1,6 @@
 import React from "react";
+import "../styles/Default.scss";
+import {PageProps} from "../App";
 
 export default class NotFoundPage extends React.Component<NotFoundProps, any> {
 	static id = "NotFound";
@@ -8,12 +10,12 @@ export default class NotFoundPage extends React.Component<NotFoundProps, any> {
 		this.state = {}
 	}
 	render() {
-		return <>
+		return <div className={"notFound"}>
 			<h1>404</h1>
-			Could not resolve {this.props.path}
-		</>;
+			Could not resolve <span>{this.props.path}</span>
+		</div>;
 	}
 }
-interface NotFoundProps {
+interface NotFoundProps extends PageProps {
 	path: string
 }

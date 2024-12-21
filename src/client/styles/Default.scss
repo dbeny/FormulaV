@@ -20,10 +20,12 @@ body {
 	--text-hover: rgba(150, 145, 145, 1);
 	--fv: rgb(239 181 101);
 	--blue: rgb(50, 50, 90);
+	--background-input-gray: rgb(14, 14, 14);
 	--background-darker-gray: rgb(19, 19, 19);
 	--background-gray: rgb(37, 36, 36);
 
 	--header-margin-percent: 15%;
+	--default-header-height: 7%;
 }
 
 @font-face {
@@ -36,17 +38,25 @@ body {
 	src: url("../static/assets/font/Formula1-Bold.otf") format("opentype");
 }
 
-/* width */
-::-webkit-scrollbar {
-	width: .5vw;
+::-webkit-scrollbar {width: .5vw;}
+::-webkit-scrollbar-track {box-shadow: inset 0 0 5px black;}
+::-webkit-scrollbar-thumb {background: var(--fv);}
+
+.notFound {
+	padding: 10%;
+	font-size: 200%;
+
+	span {
+		background-color: black;
+		border-radius: 8px;
+		padding: 5px;
+	}
 }
 
-/* Track */
-::-webkit-scrollbar-track {
-	box-shadow: inset 0 0 5px black;
+input {
+	background-color: var(--background-input-gray);
+	border: none;
+	color: var(--text);
+	font-size: 1.3rem;
 }
-
-/* Handle */
-::-webkit-scrollbar-thumb {
-	background: var(--fv);
-}
+input:focus {outline: none !important;}

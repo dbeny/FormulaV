@@ -1,0 +1,48 @@
+@use "Default";
+
+.neonButton {
+	user-select: none;
+	cursor: pointer;
+	border: 3px solid;
+	border-radius: 10px;
+	padding: 1vh 2vw 1vh 2vw;
+	box-sizing: border-box;
+	height: 5vh;
+	width: fit-content;
+	filter: drop-shadow(0 0 1rem);
+	transition: .5s;
+}
+
+.neonButtonRed {
+	border-color: var(--red);
+	filter: drop-shadow(0 0 7px var(--red));
+}
+.neonButtonRed:hover {
+	background-color: var(--red);
+}
+
+.neonButtonBlue {
+	border-color: var(--blue);
+	filter: drop-shadow(0 0 7px var(--blue));
+}
+.neonButtonBlue:hover {
+	background-color: var(--blue);
+}
+
+.neonButtonFV {
+	border-color: var(--fv);
+	filter: drop-shadow(0 0 7px var(--fv));
+}
+.neonButtonFV:hover {
+	background-color: var(--fv);
+	color: black;
+}
+
+.neonButtonWhite {
+	filter: drop-shadow(0 0 7px white);
+}
+.neonButtonWhite:hover {
+	background-color: white;
+	border-color: white;
+	color: black;
+}

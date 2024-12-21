@@ -41,19 +41,52 @@
 	}
 
 	.doubleCard {margin-bottom: .1vh;}
-	h1 {margin-bottom: 5vh}
+	h1 {
+		font-size: 3rem;
+		margin-bottom: 5vh
+	}
 }
 
 .newsPageContainer {}
-
 .schedulePageContainer {}
-
 .historyPageContainer {}
-
 .driversPageContainer {}
-
 .academiesPageContainer {}
-
 .teamsPageContainer {}
-
 .livePageContainer {}
+
+.adminPageContainer {
+	display: flex;
+	flex-direction: column;
+
+	align-content: center;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	padding: 1vw;
+
+	.adminPageLoginForm {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+
+		border: 2px solid var(--fv);
+		border-radius: 15px;
+
+		width: 40%;
+		height: fit-content;
+
+		padding: 1vw;
+
+		div {
+			margin-bottom: 1vh;
+		}
+
+		input {
+			height: 2rem;
+			width: 70%;
+			margin-bottom: .5vh;
+		}
+	}
+}

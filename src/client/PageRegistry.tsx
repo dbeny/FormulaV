@@ -7,6 +7,7 @@ import DriversPage from "./pages/DriversPage";
 import AcademiesPage from "./pages/AcademiesPage";
 import TeamsPage from "./pages/TeamsPage";
 import LivePage from "./pages/LivePage";
+import AdminPage from "./pages/AdminPage";
 
 const Registry = {
 	[HomePage.id]:      equals("/",          (path, props) => <HomePage      key={HomePage.id}      app={props.app}/>),
@@ -17,6 +18,7 @@ const Registry = {
 	[AcademiesPage.id]: equals("/academies", (path, props) => <AcademiesPage key={AcademiesPage.id} app={props.app}/>),
 	[TeamsPage.id]:     equals("/teams",     (path, props) => <TeamsPage     key={TeamsPage.id}     app={props.app}/>),
 	[LivePage.id]:      equals("/live",      (path, props) => <LivePage      key={LivePage.id}      app={props.app}/>),
+	[AdminPage.id]:     equals("/admin",     (path, props) => <AdminPage     key={AdminPage.id}     app={props.app}/>)
 } as const;
 
 export default class PageRegistry {
