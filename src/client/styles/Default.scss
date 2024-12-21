@@ -4,8 +4,14 @@ html, body {
 	box-sizing: border-box;
 	margin: 0;
 	padding: 0;
-	overflow: hidden;
+	overflow-x: hidden;
 	font-family: F1Regular, sans-serif;
+}
+
+body {
+	background-color: var(--background-gray);
+
+	color: var(--text);
 }
 
 :root {
@@ -30,7 +36,17 @@ html, body {
 	src: url("../static/assets/font/Formula1-Bold.otf") format("opentype");
 }
 
-body {
-	background-color: var(--background-gray);
-	color: var(--text);
+/* width */
+::-webkit-scrollbar {
+	width: .5vw;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	box-shadow: inset 0 0 5px black;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: var(--fv);
 }
