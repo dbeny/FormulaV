@@ -4,21 +4,18 @@ import {parsePath} from "./PageProvider";
 import Api from "./Api";
 
 export default class App extends React.Component<AppProps, AppState> {
-	private readonly api: Api;
-	
 	constructor(props: any) {
 		super(props);
 		this.state = {
 			page: this.props.page,
 			pageData: null
 		};
-		this.api = new Api();
 	}
 	
 	render() {
 		let props: PageProps = {
 			app: this,
-			api: this.api
+			api: this.props.api
 		};
 		return parsePath(this.state.page, props);
 	}
@@ -37,12 +34,13 @@ export default class App extends React.Component<AppProps, AppState> {
 }
 
 interface AppProps {
-	page: string
+	page: string,
+	api: Api
 }
 
 interface AppState {
 	page: string
-	pageData: any;
+	pageData: any
 }
 
 export interface PageProps {

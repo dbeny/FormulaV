@@ -15,15 +15,12 @@ function ifNotAuthenticated(req: Request, res: Response, next: any) {
 
 apiRouter.get("/login", passport.authenticate("discord"));
 
-//todo send user data to a page state (prob: AppState -> all state should extend or all relevant component should use)
-apiRouter.get("/redirect", passport.authenticate("discord"), (_req: Request, res: Response) => {
+apiRouter.get("/redirect", passport.authenticate("discord"), (req: Request, res: Response) => {
+	//todo 67689279-b41c-8002-b095-38ae280e3775
+	res.cookie("sessionId", req.sessionID);
 	res.redirect("/dashboard");
 });
 
 apiRouter.post("/register", ifNotAuthenticated, (req: Request, res: Response) => {
 	res.status(403).send("Under construction");
-});
-
-apiRouter.get("/auth_status", ifAuthenticated, (req: Request, res: Response) => {
-	res.sendStatus(200);
 });

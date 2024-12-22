@@ -23,6 +23,7 @@ export default class DashboardPage extends React.Component<DashboardPageProps, D
 		}
 	}
 	
+	//discord user avatar: https://cdn.discordapp.com/avatars/<userId>/<avatar>.png
 	render() {
 		return <>
 			<DefaultHeader app={this.props.app} api={this.props.api}/>
@@ -37,6 +38,7 @@ export default class DashboardPage extends React.Component<DashboardPageProps, D
 	}
 	
 	componentDidMount() {
+	
 	}
 }
 
