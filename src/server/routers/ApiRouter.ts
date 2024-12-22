@@ -1,6 +1,5 @@
 import express, {Request, Response, Router} from "express";
-import Mongobase from "../mongo/Mongobase";
-import path from "path";
+import passport from "passport";
 
 export const apiRouter: Router = express.Router(/*{mergeParams: true}*/);
 
@@ -14,16 +13,17 @@ function ifNotAuthenticated(req: Request, res: Response, next: any) {
 	else next();
 }
 
-apiRouter.get("/", ifNotAuthenticated, (_req: Request, res: Response) => {
-	res.sendFile(path.resolve("./client/index.html"));
-});
+apiRouter.get("/login", passport.authenticate("discord"));
 
-apiRouter.post("/login", ifNotAuthenticated, (req: Request, res: Response) => {
-	res.status(200).json(JSON.stringify({
-		message: `Hello ${req.body.username}`
-	}));
+//todo send user data to a page state (prob: AppState -> all state should extend or all relevant component should use)
+apiRouter.get("/redirect", passport.authenticate("discord"), (_req: Request, res: Response) => {
+	res.redirect("/dashboard");
 });
 
 apiRouter.post("/register", ifNotAuthenticated, (req: Request, res: Response) => {
-	res.status(403).send("Not yet");
+	res.status(403).send("Under construction");
+});
+
+apiRouter.get("/auth_status", ifAuthenticated, (req: Request, res: Response) => {
+	res.sendStatus(200);
 });

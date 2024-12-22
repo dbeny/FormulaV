@@ -13,10 +13,27 @@ export default class NeonButton extends React.Component<NeonButtonProps> {
 	}
 }
 
+export class NeonRedirectButton extends React.Component<NeonRedirectButtonProps> {
+	constructor(props: NeonRedirectButtonProps) {
+		super(props);
+		this.state = {}
+	}
+	
+	render() {
+		return <a className={"neonButton " + ("neonButton"+this.props.color)} href={this.props.href}>{this.props.text}</a>;
+	}
+}
+
 export type NeonButtonColor = "Red" | "Blue" | "FV" | "White";
 
 interface NeonButtonProps extends PageProps {
 	text: string,
 	onClick: () => void,
+	color: NeonButtonColor
+}
+
+interface NeonRedirectButtonProps extends PageProps {
+	text: string,
+	href: string,
 	color: NeonButtonColor
 }

@@ -38,8 +38,8 @@ export default class DefaultHeader extends React.Component<PageProps, any> {
 				<TextButton text={"Live"} onClick={() => {
 					this.props.app.setPage("/live", true, null);
 				}}/>
-				<TextButton text={"Admin"} onClick={() => {
-					this.props.app.setPage("/admin", true, null);
+				<TextButton text={"Dashboard"} onClick={() => {
+					this.props.app.setPage("/dashboard", true, null);
 				}}/>
 			</div>
 		</div>;

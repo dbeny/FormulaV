@@ -7,9 +7,9 @@ import passport from "passport";
 import session from "express-session";
 import {apiRouter} from "./routers/ApiRouter";
 import Utils from "fv-shared/Utils";
-import initializePassport from "./PassportConfig";
 
 import dotenv from "dotenv";
+import {initPassportDiscord} from "./PassportConfig";
 dotenv.config();
 
 Mongobase.connect()
@@ -31,13 +31,18 @@ app.use(express.static(path.join(__dirname, "client")));
 app.use(session({
 	secret: process.env.EXPRESS_SESSION_SECRET || Utils.generateString(Utils.ALPHANUMERIC, 20),
 	resave: false,
-	saveUninitialized: false
+	saveUninitialized: false,
+	cookie: {
+		maxAge: 60000*60*24*365,
+		httpOnly: true,
+		secure: true
+	}
 }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(passport.authenticate("session"));
 
-initializePassport();
+initPassportDiscord();
 
 app.use("/api", apiRouter);
 app.get("/*", (_req: Request, res: Response) => res.sendFile(path.resolve("./client/index.html")));
