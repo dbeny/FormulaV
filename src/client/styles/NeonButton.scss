@@ -10,6 +10,9 @@
 	height: 5vh;
 	width: fit-content;
 	transition: .5s;
+	display: flex;
+	align-items: center;
+	font-weight: bold;
 }
 
 .neonButtonRed {border-color: var(--red);}

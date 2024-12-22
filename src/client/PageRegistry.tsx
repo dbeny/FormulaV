@@ -10,15 +10,15 @@ import LivePage from "./pages/LivePage";
 import AdminPage from "./pages/AdminPage";
 
 const Registry = {
-	[HomePage.id]:      equals("/",          (path, props) => <HomePage      key={HomePage.id}      app={props.app}/>),
-	[NewsPage.id]:      equals("/news",      (path, props) => <NewsPage      key={NewsPage.id}      app={props.app}/>),
-	[SchedulePage.id]:  equals("/schedule",  (path, props) => <SchedulePage  key={SchedulePage.id}  app={props.app}/>),
-	[HistoryPage.id]:   equals("/history",   (path, props) => <HistoryPage   key={HistoryPage.id}   app={props.app}/>),
-	[DriversPage.id]:   equals("/drivers",   (path, props) => <DriversPage   key={DriversPage.id}   app={props.app}/>),
-	[AcademiesPage.id]: equals("/academies", (path, props) => <AcademiesPage key={AcademiesPage.id} app={props.app}/>),
-	[TeamsPage.id]:     equals("/teams",     (path, props) => <TeamsPage     key={TeamsPage.id}     app={props.app}/>),
-	[LivePage.id]:      equals("/live",      (path, props) => <LivePage      key={LivePage.id}      app={props.app}/>),
-	[AdminPage.id]:     equals("/admin",     (path, props) => <AdminPage     key={AdminPage.id}     app={props.app}/>)
+	[HomePage.id]:      equals("/",          (path, props) => <HomePage      key={HomePage.id}      app={props.app} api={props.api}/>),
+	[NewsPage.id]:      equals("/news",      (path, props) => <NewsPage      key={NewsPage.id}      app={props.app} api={props.api}/>),
+	[SchedulePage.id]:  equals("/schedule",  (path, props) => <SchedulePage  key={SchedulePage.id}  app={props.app} api={props.api}/>),
+	[HistoryPage.id]:   equals("/history",   (path, props) => <HistoryPage   key={HistoryPage.id}   app={props.app} api={props.api}/>),
+	[DriversPage.id]:   equals("/drivers",   (path, props) => <DriversPage   key={DriversPage.id}   app={props.app} api={props.api}/>),
+	[AcademiesPage.id]: equals("/academies", (path, props) => <AcademiesPage key={AcademiesPage.id} app={props.app} api={props.api}/>),
+	[TeamsPage.id]:     equals("/teams",     (path, props) => <TeamsPage     key={TeamsPage.id}     app={props.app} api={props.api}/>),
+	[LivePage.id]:      equals("/live",      (path, props) => <LivePage      key={LivePage.id}      app={props.app} api={props.api}/>),
+	[AdminPage.id]:     equals("/admin",     (path, props) => <AdminPage     key={AdminPage.id}     app={props.app} api={props.api}/>)
 } as const;
 
 export default class PageRegistry {

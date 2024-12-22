@@ -15,7 +15,7 @@ export default class DriversPage extends React.Component<DriversPageProps, Drive
 	
 	render() {
 		return <>
-			<DefaultHeader app={this.props.app}/>
+			<DefaultHeader app={this.props.app} api={this.props.api}/>
 			<div className={"page driversPageContainer"}>
 				Drivers
 			</div>

@@ -18,10 +18,12 @@ apiRouter.get("/", ifNotAuthenticated, (_req: Request, res: Response) => {
 	res.sendFile(path.resolve("./client/index.html"));
 });
 
-apiRouter.get("/login", ifNotAuthenticated, (_res: Request, res: Response) => {
-	res.status(403).send("Not yet");
+apiRouter.post("/login", ifNotAuthenticated, (req: Request, res: Response) => {
+	res.status(200).json(JSON.stringify({
+		message: `Hello ${req.body.username}`
+	}));
 });
 
-apiRouter.post("/register", ifNotAuthenticated, (_res: Request, res: Response) => {
+apiRouter.post("/register", ifNotAuthenticated, (req: Request, res: Response) => {
 	res.status(403).send("Not yet");
 });

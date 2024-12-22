@@ -1,18 +1,25 @@
 import React from "react";
 import "./styles/Default.scss";
 import {parsePath} from "./PageProvider";
+import Api from "./Api";
 
 export default class App extends React.Component<AppProps, AppState> {
+	private readonly api: Api;
+	
 	constructor(props: any) {
 		super(props);
 		this.state = {
 			page: this.props.page,
 			pageData: null
 		};
+		this.api = new Api();
 	}
 	
 	render() {
-		let props: PageProps = { app: this };
+		let props: PageProps = {
+			app: this,
+			api: this.api
+		};
 		return parsePath(this.state.page, props);
 	}
 	
@@ -22,7 +29,11 @@ export default class App extends React.Component<AppProps, AppState> {
 		this.setState({...this.state, page: path, pageData: data});
 	}
 	
-	componentDidMount() {}
+	componentDidMount() {
+		/*does not work
+	    addEventListener("popstate", (e) =>
+			this.setPage(window.location.pathname, true, null));*/
+	}
 }
 
 interface AppProps {
@@ -35,5 +46,6 @@ interface AppState {
 }
 
 export interface PageProps {
-	app: App
+	app: App,
+	api: Api
 }

@@ -19,7 +19,7 @@ export default class HomePage extends React.Component<HomePageProps, HomePageSta
 	
 	render() {
 		return <>
-			<DefaultHeader app={this.props.app}/>
+			<DefaultHeader app={this.props.app} api={this.props.api}/>
 			<div className={"page homePageContainer"}>
 				<img className={"homePageLogo"} src={animatedLogo} alt={""}/>
 				<h1>What is Formula V?</h1>

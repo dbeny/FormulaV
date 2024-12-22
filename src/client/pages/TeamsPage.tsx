@@ -15,7 +15,7 @@ export default class TeamsPage extends React.Component<TeamsPageProps, TeamsPage
 	
 	render() {
 		return <>
-			<DefaultHeader app={this.props.app}/>
+			<DefaultHeader app={this.props.app} api={this.props.api}/>
 			<div className={"page teamsPageContainer"}>
 				Teams
 			</div>

@@ -32,5 +32,5 @@ export function parsePath(path: string, props: PageProps): Page {
 		let res = provider(path, props);
 		if (res) return res;
 	}
-	return <NotFoundPage key={"NotFound"} path={path}/>;
+	return <NotFoundPage key={"NotFound"} path={path} app={props.app} api={props.api}/>;
 }
