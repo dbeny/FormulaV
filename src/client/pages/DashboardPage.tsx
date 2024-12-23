@@ -14,12 +14,7 @@ export default class DashboardPage extends React.Component<DashboardPageProps, D
 	constructor(props: any) {
 		super(props);
 		this.state = {
-			userData: {
-				username: "",
-				discordId: "",
-				avatar: ""
-			},
-			authenticated: false
+			isAuthenticated: false
 		}
 	}
 	
@@ -28,7 +23,7 @@ export default class DashboardPage extends React.Component<DashboardPageProps, D
 		return <>
 			<DefaultHeader app={this.props.app} api={this.props.api}/>
 			<div className={"page dashboardPageContainer"}>
-				{this.state.authenticated ? <div className={"dashboardPageContent"}>
+				{this.state.isAuthenticated ? <div className={"dashboardPageContent"}>
 					Logged in
 				</div> : <div className={"dashboardPageLoginForm"}>
 					<NeonRedirectButton text={"Login with Discord"} href={"/api/login"} color={"FV"} app={this.props.app} api={this.props.api}/>
@@ -38,13 +33,22 @@ export default class DashboardPage extends React.Component<DashboardPageProps, D
 	}
 	
 	componentDidMount() {
+		this.props.api.onValidationChange = () => {
+			this.setState({...this.state, isAuthenticated: this.props.api.isAuthenticated()});
+		}
+		
+		if (this.props.api.isAuthenticated()) {
+			this.setState({...this.state, isAuthenticated: true});
+		}
+	}
 	
+	componentWillUnmount() {
+		this.props.api.onValidationChange = null;
 	}
 }
 
 interface DashboardPageProps extends PageProps {}
 
 interface DashboardPageState {
-	userData: DiscordUserData
-	authenticated: boolean
+	isAuthenticated: boolean;
 }

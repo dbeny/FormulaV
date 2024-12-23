@@ -14,6 +14,7 @@ const Registry = {
 	[NewsPage.id]:      equals("/news",      (path, props) => <NewsPage      key={NewsPage.id}      app={props.app} api={props.api}/>),
 	[SchedulePage.id]:  equals("/schedule",  (path, props) => <SchedulePage  key={SchedulePage.id}  app={props.app} api={props.api}/>),
 	[HistoryPage.id]:   equals("/history",   (path, props) => <HistoryPage   key={HistoryPage.id}   app={props.app} api={props.api}/>),
+	// singleNumber /drivers/someone should return DriversPage too but with a different prop (like "singleDriverPage?" or smth)
 	[DriversPage.id]:   equals("/drivers",   (path, props) => <DriversPage   key={DriversPage.id}   app={props.app} api={props.api}/>),
 	[AcademiesPage.id]: equals("/academies", (path, props) => <AcademiesPage key={AcademiesPage.id} app={props.app} api={props.api}/>),
 	[TeamsPage.id]:     equals("/teams",     (path, props) => <TeamsPage     key={TeamsPage.id}     app={props.app} api={props.api}/>),

@@ -1,4 +1,5 @@
 import * as mongo from "mongodb";
+import DiscordUserModel from "./models/Users";
 
 export default class Mongobase {
 	static collections: {
